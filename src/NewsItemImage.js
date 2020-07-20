@@ -8,8 +8,12 @@ import { green } from '@material-ui/core/colors';
 
 const useStyles = makeStyles((theme) => ({
     largeImage: {
-        width: theme.spacing(7),
-        height: theme.spacing(7),
+        width: theme.spacing(6),
+        height: theme.spacing(6),
+    },
+    largeIcon: {
+        width: theme.spacing(4),
+        height: theme.spacing(4),
     },
     green: {
         color: '#fff',
@@ -26,8 +30,8 @@ export default function NewsItemImage({ urlToImage }) {
                 <Avatar alt="News Image" src={urlToImage} className={classes.largeImage}/>
             </ListItemAvatar>
             :<ListItemAvatar>
-                <Avatar className={classes.green}>
-                    <AssignmentIcon />
+                <Avatar className={[classes.largeImage, classes.green]}>
+                    <AssignmentIcon className={classes.largeIcon}/>
                 </Avatar>
             </ListItemAvatar>
     )
